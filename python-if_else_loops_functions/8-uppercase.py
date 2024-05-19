@@ -4,7 +4,7 @@ def uppercase(str):
         print("")
     for i in range(len(str)):
         suffix = "\n" if i == len(str) - 1 else ""
-        upp = "";
+        upp = ""
         if ord(str[i]) >= 97 and ord(str[i]) <= 122:
             upp = chr(ord(str[i]) - 32)
         else:
