@@ -1,3 +1,2 @@
---prints description of the table from database.
-USE hbtn_0c_0;
-SHOW COLUMNS FROM `first_table`;
+-- Prints the full description of the table first_table.
+SHOW CREATE TABLE `first_table`;
