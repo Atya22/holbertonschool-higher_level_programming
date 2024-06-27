@@ -1,0 +1,66 @@
+# 7-base_geometry.txt
+
+=============================
+How to Use 7-base_geometry.py
+=============================
+
+This modules defines a base geometry class BaseGeometry.
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("t", "width")
+Traceback (most recent call last):
+...
+TypeError: t must be an integer
+
+>>> bg.integer_validator("t", 0)
+Traceback (most recent call last):
+...
+ValueError: t must be greater than 0
+
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> bg.integer_validator("t", -2)
+Traceback (most recent call last):
+...
+ValueError: t must be greater than 0
+
+>>> bg.integer_validator("t", (3,4))
+Traceback (most recent call last):
+...
+TypeError: t must be an integer
+
+>>> bg.integer_validator("t", {3,4})
+Traceback (most recent call last):
+...
+TypeError: t must be an integer
+
+>>> bg.integer_validator("t", [6])
+Traceback (most recent call last):
+...
+TypeError: t must be an integer
+
+>>> bg.integer_validator("t", True)
+Traceback (most recent call last):
+...
+TypeError: t must be an integer
+
+>>> bg.integer_validator("t", None)
+Traceback (most recent call last):
+...
+TypeError: t must be an integer
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("t")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
