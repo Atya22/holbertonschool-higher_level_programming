@@ -12,4 +12,4 @@ INSERT INTO `second_table` (`id`, `name`, `score`) VALUES
 (3, 'Bob', 14),
 (4, 'George', 8);
 
-SELECT name, score FROM second_table ORDER BY score DESC;
+SELECT score, name FROM second_table ORDER BY score DESC;
