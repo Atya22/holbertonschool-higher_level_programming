@@ -11,12 +11,7 @@ Base = declarative_base()
 
 
 class State(Base):
-    """State class
-    Attributes:
-        __tablename__ (str): The table name of the class
-        id (int): The State id of the class
-        name (str): The State name of the class
-    """
+    """State class to interact with the ORM."""
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True)
