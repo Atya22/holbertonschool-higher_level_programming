@@ -5,7 +5,7 @@ def generate_invitations(template, attendees):
     def safe_format(template, **kwargs):
         class SafeDict(dict):
             def __missing__(self, key):
-                return "{%s}" % key
+                return "N/A"  # Changed from returning "{%s}" % key to "N/A"
         return template.format_map(SafeDict(**kwargs))
 
     # Validate input types
