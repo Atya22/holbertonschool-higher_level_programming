@@ -47,7 +47,7 @@ def display_products():
     elif source == 'sql':
         products = DataReader.read_sql()
     else:
-        return render_template('product_display.html', error="Invalid source specified.")
+        return render_template('product_display.html', error="Wrong source")
 
     if product_id:
         products = [product for product in products if product['id'] == product_id]
